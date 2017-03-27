@@ -1,0 +1,71 @@
+.react-number-input{
+  display: block;
+  position: relative;
+  height: 40px;
+  padding: 0 10px;
+  overflow: hidden;
+  color: #666;
+  font-size: 24px;
+  line-height: 40px;
+  border: 1px solid #ccc;
+}
+.react-number-input.focus{
+  border-color: #999;
+}
+.react-number-input.disabled{
+  opacity: .5;
+  pointer-events: none;
+}
+.react-number-input .react-number-input-value-item{
+  display: block;
+  float: left;
+  height: 100%;
+  overflow: hidden;
+}
+.react-number-input .react-number-input-cursor{
+  position: relative;
+  display: none;
+  float: left;
+  height: 100%;
+  animation: cursor linear infinite 1s
+}
+.react-number-input .react-number-input-cursor::before{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2px;
+  height: 1em;
+  background-color: #06f;
+  content: '';
+  transform: translate3d(0, -50%, 0);
+}
+.react-number-input.focus .react-number-input-cursor{
+  display: block;
+}
+.react-number-input-placeholder{
+  position: absolute;
+  color: #ccc;
+  pointer-events: none;
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 1;
+  }
+  49%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 2s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+ opacity:0;
+}

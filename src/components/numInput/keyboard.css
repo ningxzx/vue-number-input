@@ -1,0 +1,63 @@
+.number-input-keyboard{
+  position: fixed;
+  visibility: hidden;
+  z-index: 999999;
+  right: -1px;
+  bottom: -1px;
+  left: 0;
+  height: 40%;
+  background-color: #fdfdfd;
+  opacity: 0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,.04);
+  transition: .4s;
+  transform: translate3d(0, 100%, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  border-top:1px solid #c1c5c9;;
+}
+.number-input-keyboard.active{
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0, 0, 0); 
+}
+
+.number-input-keyboard button{
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+  width: 33.333333%;
+  height: 25%;
+  padding: 0;
+  overflow: hidden;
+  color: #161616;
+  font-size: 60px;
+  text-align: center;
+  background-color: #fff;
+  border: none;
+  border-right: 1px solid #c1c5c9;
+  border-bottom: 1px solid #c1c5c9;
+  outline: none;
+  -webkit-tap-highlight-color: #c7cbd1;
+  -webkit-touch-callout: none
+}
+.number-input-keyboard button:active{
+  background-color: #ebecee;
+}
+.number-input-keyboard button.disabled{
+  pointer-events: none;
+  background-color: #ebecee;
+}
+
+.number-input-keyboard button[data-value="delete"] {
+  background-color: #ebecee;
+  background-image: url(./backspace.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 60px auto;
+}
+
+.hairlines .number-input-keyboard button{
+  margin-top: .5px;
+  border-width: .5px;
+}

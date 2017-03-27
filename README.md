@@ -1,2 +1,1 @@
-# vue-number-input
-a vue component for number input or id card No. input.
+A vue.js component for decimal number or id card number input.
